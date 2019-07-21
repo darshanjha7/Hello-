@@ -1,146 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>RESPONSIVE DESIGN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE LAYOUT</title>
     <style>
-        *{
-            box-sizing: border-box;
-        }
+        * {
+  box-sizing: border-box;
+}
         body{
-            margin:0px;
-            color: white;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin:0;
+            font-family:cursive
         }
-        div.header{
-            background :linear-gradient(to right,red,white);
-            height:100px;
-            font-size: 40px;
+        .header{
+            height:250px;
+            background: url("header_pic.jpg") center ;
+            background-repeat: no-repeat;
+            background-size: cover;
             
-            padding-top:20px;
+            
+            
         }
-        .column{
+        .nav{
             display: flex;
-            
-            
+            background-color: rgb(247, 77, 77);
+
         }
-        .div1{
-            display: flex;
-            flex-direction: column;
-            margin-top:10px;
-            width:20%;
+        .nav a{
             text-align: center;
-            margin-left:10px;
-            
-            
-            
-        }
-        a{
-            padding:10px;
-            background-color: rgb(19, 58, 117);
-            width: 100%;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
+            box-sizing: border-box;
             font-size: 20px;
-            color:white;
         }
         a:hover{
-            background-color: lightblue;
-            color: black;
+            background-color:rgb(243, 169, 169);
+            color:black;
         }
-        h3{
-          font-size: 30px; 
-        }
-        .div2{
-            color:black; 
-            flex:20%;
-            font-size: 21px;
-            padding: 10px;
-            margin-left:10px;
-            margin-right: 10px;
-        }
-        .div3{
-            background-color: rgb(19, 58, 117);
-            text-align: center;
-            width: 300px;
-            height: 50%;
-            padding:20px;
-            margin:20px;
-        }
-        @media screen and (max-width:550px){
-            div.column{
-                display: flex;
+        .fakeimg{
             
-            }
-            .c{
-                width:fit-content;
-            }
-            .div3{
-                
-            }
-        }    
-        @media screen and (max-width:850px){
-            div.column{
-                display: flex;
-                flex-direction: column;
-            }
-            .div1{
-                display: flex;
-                flex-direction: row;
-                width:100%;
-            }
-            .div3{
-                width: 100%;
-                
-                
-            }
-           
-            
+            width:fit-content;
+            padding: 20px;
         }
-        @media screen and (min-width:850px){
-            .div2{
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .side {
+                flex:30%; 
+                background-color: #f1f1f1;
+                padding: 20px;
+        }
+        
+
+        .main {
                 flex:70%;
-            }
-            .column{
+                background-color: white;
+                padding: 20px;
                 display: flex;
-                flex-direction: row;
-
-            }
+                flex-wrap: wrap;
+                
+                
+        }
+        .main1{
+            padding-top:90px;
+            padding-left: 20px;
+            margin-left: 20px;
+            box-sizing: content-box;
+            width: 20%;
+            background-color: blue;
+            height: 40%;
+            margin-top: 5%;
             
         }
-        
-        
-        
 
         
+        .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+        }
+        .mypic{
+            width: 300px;
+            height:180px;
+            box-shadow: 5px 10px 10px gray;
+            border-radius: 10px;
+        }
+
         
+       
+     
+        
+
     </style>
 </head>
 <body>
-    <div class="header">Chania</div>
-
-    <div class="column">
-        <div class="div1">
-            <a href="#">The Flight</a><br>
-            <a href="#">The City</a><br>
-            <a href="#">The Island</a><br>
-            <a href="#">The Food</a><br>
-        </div>
-        <div class="div2">
-            <h3>The City</h3>
-            <p class="c">Chania is the capital of the chania region on the island of Crete.The 
-                city can be divided into two parts.
-            </p>
-        </div>
-        <div class="div3">
-            <h3>WHAT?</h3>
-            <p>Chania is a city on the island of Crete</p>
-            <h3>Where?</h3>
-            <p>Crete is a Greek Island in the Mediterranean sea.</p>
-        </div>
-
-    </div>
     
-    
-
+        <div class="header"></div>
+        
+        <div class="row">
+                <div class="side">
+                  <h2>About Me</h2>
+                  <h5>Photo of me:</h5>
+                  <div ><img class="mypic" src="mypic.jpg" alt="mypic" ></div>
+                  <p style="color: rgb(70, 62, 62)">Hey !<br>Welcome to my page</p>
+                </div>
+                
+                <div class="main">
+                    <h2>Skills</h2>
+                  <div class="main1" ><strong>Programming Language:</strong>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li><br>
+                  </div>
+                  <div  class="main1"><strong>Web Development</strong>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>BOOTSTRAP</li>
+                    <li>JAVASCRIPT</li>
+                    <li>JQUERY</li><br>
+                  </div>
+                  <div class="main1"><strong>Work Experience</strong>
+                    <li>Got selected for Various companies from Internshala</li>
+                    <li>Currently working on various projects</li>
+                  </div>
+                 
+                  
+                </div>
+        </div>
+              
+              <!-- Footer -->
+              <div class="footer">
+                <h3>CONTACT:</h3>
+                    <p >EMAIL-ID:djdarshanjha@gmail.com</p>
+                    <p>PHONE NO.-9593975432</p>
+              </div>
+              
 </body>
 </html>
+              
